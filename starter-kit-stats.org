@@ -68,6 +68,8 @@ How this works:
 			   TeX-run-TeX nil (latex-mode) :help "Run Latex after Sweave") t)
 	    (setq TeX-command-default "Sweave")))
 
+;; Plug Rnw into AucTeX (new in ess-devel)
+(setq ess-swv-plug-into-AUCTeX-p t)
 
 #+end_src
  
