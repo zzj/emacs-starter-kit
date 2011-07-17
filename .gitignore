@@ -42,3 +42,4 @@ src/auctex-src/*elc
 /.#starter-kit-latex.org
 /index.org
 /vc-git.awk
+el-get/
