@@ -53,7 +53,7 @@
 ;;; init.el ends here
 (require 'zenburnish)
 (zenburnish)
-(setenv "PATH" (concat (getenv "PATH") ":/opt/local/bin"))
+(setenv "PATH" (concat (getenv "PATH") ":/opt/local/bin/:/opt/local/bin/git/:/bin/"))
 (require 'org-latex)
 (setq org-export-latex-listings t)
 (add-to-list 'org-export-latex-classes
@@ -67,7 +67,7 @@
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-(add-to-list 'exec-path "/opt/local/bin/")
+(add-to-list 'exec-path "/opt/local/bin/:/opt/local/bin/git/")
 
 
 (load "php-mode-1.5.0/php-mode.el")
@@ -142,8 +142,6 @@
 ;;      nxml-child-indent 4
 ;;      nxml-attribute-indent 4)
 
-(require 'php-mode)
-
 (defconst my-emacs-path ".emacs.d/el-get/dea/" "emacs相关配置文件的路径")
 (defconst my-emacs-my-lisps-path  (concat my-emacs-path "my-lisps/") "我自己写的emacs lisp包的路径")
 (defconst my-emacs-lisps-path     (concat my-emacs-path "lisps/") "我下载的emacs lisp包的路径")
@@ -158,7 +156,9 @@
 (require 'ahei-misc)
 
 ;; 利用`eval-after-load'加快启动速度的库
-;; 用eval-after-load避免不必要的elisp包的加载
+;;
+
+;;用eval-after-load避免不必要的elisp包的加载
 ;; http://emacser.com/eval-after-load.htm
 ;;(require 'eval-after-load)
 
